@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Tarjeta Modificacle</title>
+</head>
+<body>
+  <main class="container">
+    <section class="ui">
+      <div class="container-left">
+        <form id="credit-card">
+          <div class="number-container">
+            <label>Card Number</label>
+            <input type="text" name="card-number" id="card-number" maxlength="19" placeholder="1234 5678 9101 2344" required onkeypress="return event.charCode >=  48 && event.charCode <= 57">
+          </div>
+          <div class="name-container">
+            <label>Holder</label>
+            <input type="text" name="name-text" id="name-text" maxlength="30" placeholder="BRAYAN VILLAR" required onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.key == ' '">
+          </div>
+          <div class="infos-container">
+            <div class="expiration-container">
+              <label>Valid-Thru</label>
+              <input type="text" name="valid-thru-text" id="valid-thru-text" maxlength="5" placeholder="02/40" required onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+            </div>
+            <div class="cvv-container">
+              <label>CVV</label>
+              <input type="text" name="cvv-text" id="cvv-text" maxlength="4" placeholder="1234" required onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+            </div>
+          </div>
+          <input type="submit" value="Añadir" id="add">
+        </form>
+      </div>
+      <div class="container-right">
+        <div class="card">
+          <div class="intern">
+            <img class="approximation" src="img/aprox.png" alt="Aproximacióm">
+            <img class="logo" src="img/logo.png" alt="Logo">
+            <img class="visa" src="img/visa.png" alt="Visa">
+            <div class="datos-container">
+              <div class="card-number">
+                <div class="number-vl">1234 5678 9101 2344</div>
+              </div>
+              <div class="card-holder">
+                <label>Holder</label>
+                <div class="name-vl">BRAYAN VILLAR</div>
+              </div>
+              <div class="card-infos">
+                <div class="exp">
+                  <label>Valid-Thru</label>
+                  <div class="expiration-vl">02/40</div>
+                </div>
+                <div class="cvv">
+                  <label>CVV</label>
+                  <div class="cvv-vl">1234</div>
+                </div>
+              </div>
+            </div>
+            <img class="chip" src="img/chip.png" alt="Chip">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
